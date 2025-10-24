@@ -1,0 +1,214 @@
+:root{
+  --bg:#0b0f14;
+  --card:#0f1720;
+  --muted:#94a3b8;
+  --accent:#7c3aed; /* violet accent */
+  --glass: rgba(255,255,255,0.03);
+  --radius:14px;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+*{box-sizing:border-box}
+html,body{
+    height:100%
+}
+
+body{
+  margin:0;
+  background:linear-gradient(180deg,var(--bg),#050607 140%);
+  color:#e6eef8;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.5;
+}
+
+/* layout */
+.container{
+    max-width:1100px;
+    margin:0 auto;
+    padding:2rem
+}
+
+.nav{
+    position: fixed;
+    top:0;backdrop-filter:
+    blur(6px);
+    background:linear-gradient(180deg, rgba(10,12,15,0.6), rgba(10,12,15,0.35));
+    border-bottom:1px solid rgba(255,255,255,0.03)
+}
+
+.nav .container{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:1rem 2rem
+}
+
+.brand{
+    font-weight:700;
+    color:var(--accent);
+    text-decoration:none;
+    font-size:1.1rem
+}
+
+.nav nav a{
+    color:var(--muted);
+    text-decoration:none;
+    margin-left:1rem;
+    font-size:0.95rem
+}
+
+.nav nav a:hover{
+    color:#fff
+}
+
+/* hero */
+.hero{
+    padding:4rem 0 6rem
+}
+
+.hero-grid{
+    display:grid;
+    grid-template-columns:1fr 340px;
+    gap:2rem;
+    align-items:center
+}
+
+.hero-text h1{
+    font-size:2.2rem;
+    margin:0 0 0.25rem
+}
+
+.subtitle{
+    color:var(--muted);
+    margin:0 0 1rem
+}
+
+.lead{
+    color:var(--muted);
+    max-width:48ch
+}
+
+.cta{
+    margin-top:1.25rem
+}
+
+.btn{
+    display:inline-block;
+    padding:0.6rem 1rem;
+    border-radius:10px;
+    background:linear-gradient(90deg,var(--accent),#5b21b6);
+    color:white;
+    text-decoration:none;
+    border:none;
+    cursor:pointer;
+    box-shadow:0 6px 18px rgba(124,58,237,0.18)
+}
+
+.btn-ghost{
+    background:transparent;
+    border:1px solid rgba(255,255,255,0.06);
+    color:var(--muted);
+    margin-left:0.5rem
+}
+
+/* hero card */
+.hero-card{
+    backdrop-filter: blur(6px);
+    background:var(--glass);
+    border-radius:var(--radius);
+    padding:1.5rem;border:1px solid rgba(255,255,255,0.03);
+    box-shadow: 0 8px 30px rgba(2,6,23,0.6)
+}
+
+.hero-card img{
+    width:88px;
+    height:88px;
+    border-radius:12px;
+    display:block;
+    margin-bottom:0.75rem
+}
+
+/* sections */
+.panel{
+    padding:3rem 0
+}
+
+.panel.dark{
+    background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));
+    border-top:1px solid rgba(255,255,255,0.02);
+    border-bottom:1px solid rgba(255,255,255,0.02)
+}
+
+h2{
+    margin:0 0 1rem;
+    font-size:1.4rem
+}
+
+/* skills */
+.skills-grid{
+    display:flex;
+    flex-wrap:wrap;
+    gap:0.6rem
+}
+
+.skill{
+    background:#07101a;
+    padding:0.6rem 0.9rem;
+    border-radius:10px;
+    border:1px solid rgba(255,255,255,0.03);
+    font-weight:600;
+    color:var(--muted)
+}
+
+/* projects 
+.projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.project-card{padding:1rem;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+.project-card h3{margin:0 0 0.5rem}
+.proj-links a{margin-right:0.6rem;color:var(--accent);text-decoration:none} */
+
+/* form */
+form{
+    max-width:720px
+}
+
+.form-row{
+    display:flex;
+    gap:0.6rem
+}
+
+input,textarea{
+    width:100%;
+    padding:0.7rem;
+    border-radius:8px;
+    border:1px solid rgba(255,255,255,0.04);
+    background:#071018;
+    color:inherit
+}
+
+.muted{
+    color:var(--muted);
+    font-size:0.9rem;
+    margin-top:0.6rem
+}
+
+/* footer */
+.site-footer{
+    padding:2rem 0;
+    border-top:1px solid rgba(255,255,255,0.02);
+    opacity:0.9;
+    color:var(--muted);
+    font-size:0.95rem;
+    text-align:center
+}
+
+/* responsive */
+@media(max-width:900px){
+  .hero-grid{grid-template-columns:1fr}
+  .projects-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:600px){
+  .projects-grid{grid-template-columns:1fr}
+  .nav .container{padding:0.6rem 1rem}
+  .nav nav a{display:none}
+}
