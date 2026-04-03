@@ -10,6 +10,7 @@ This is a simple, responsive portfolio template built with **HTML**, **CSS**, an
 - `script.js` — small JS for interactions
 - `assets/resume.pdf` — resume file
 ```
+
 ---
 
 ### How to use
