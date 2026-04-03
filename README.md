@@ -22,4 +22,5 @@ This is a simple, responsive portfolio template built with **HTML**, **CSS**, an
 --- 
 
 ### Author 
+
 #### Keerthana S
